@@ -103,7 +103,7 @@ img{
   background: rgba(0,0,0,0.6);
 }
 .hero *{
-  Z-index:10;
+  z-index:10;
 }
 
 .hero .blog{

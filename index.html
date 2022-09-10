@@ -205,14 +205,14 @@
                 doloribus sunt eius at saepe! Enim vitae dicta eius repudiandae
                 voluptatem veritatis autem libero adipisc?
               </p>
-
+            
               <a href="blog.html" class="btn btn-outline">
                 <i class="fas fa-chevron"></i>
                 Read Our Blog
               </a>
+          </div>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- Team -->
@@ -295,25 +295,19 @@
       </div>
       <p>Copyright &copy;2022-EMOFF</p>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
+
     <script src="js/lightbox.min.js"></script>
     <script>
       const navbar = document.getElementById("navbar");
       let scrolled = false;
-
       window.onscroll = function () {
         if (window.pageYOffset > 100) {
           navbar.classList.remove("top");
-
-          if (scrolled) {
+          if (!scrolled) {
             navbar.style.transform = "translateY(-70px)";
           }
           setTimeout(function () {
-            navbar.style.transform = "translateY(0)";
+            navbar.style.transform = "translateY(0px)";
             scrolled = true;
           }, 200);
         } else {
@@ -321,21 +315,42 @@
           scrolled = false;
         }
       };
-      // smooth scrolling
-      $("#navbar a, .btn").on("click", function (e) {
-        if (this.has !== "") {
-          e.preventDefault();
 
-          const hash = this.hash;
+      const home = document.getElementById("a");
+      const about = document.getElementById("b");
+      const cases = document.getElementById("c");
+      const blog = document.getElementById("d");
+      const contact = document.getElementById("e");
 
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top - 100,
-            },
-            800
-          );
-        }
-      });
+      home.addEventListener("click", aHome);
+      about.addEventListener("click", bAbout);
+      cases.addEventListener("click", cCases);
+      blog.addEventListener("click", dBlog);
+      contact.addEventListener("click", eContact);
+
+      function aHome(e) {
+        document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+        e.preventDefault();
+      }
+      function bAbout(e) {
+        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+        e.preventDefault();
+      }
+      function cCases(e) {
+        document.getElementById("cases").scrollIntoView({ behavior: "smooth" });
+        e.preventDefault();
+      }
+      function dBlog(e) {
+        document.getElementById("blog").scrollIntoView({ behavior: "smooth" });
+        e.preventDefault();
+      }
+      function eContact(e) {
+        document
+          .getElementById("contact")
+          .scrollIntoView({ behavior: "smooth" });
+        e.preventDefault();
+      }
     </script>
+
   </body>
 </html>
