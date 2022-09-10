@@ -128,9 +128,16 @@ img{
   margin-bottom: 15px;
 }
 
-.team img{
+/* .team img{
   border-radius: 30%;
+} */
+
+.team img {
+  border-radius: 40%;
+  width: 20vw;
 }
+
+
 
 /* Callback form */
 
