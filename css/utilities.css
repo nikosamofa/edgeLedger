@@ -132,6 +132,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0 40px;
+  width: 50%;
 }
 
 .flex-grid .column{
