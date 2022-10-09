@@ -4,7 +4,9 @@
   padding: 0;
   margin: 0;
 }
-
+#resume{
+  margin-top: -10px;
+}
 body{
   font-family: open sans, san sans-serif;
   background: #ffff;
@@ -31,6 +33,9 @@ p{
 img{
   width: 100%;
 }
+ol{
+  margin-left: 50px;
+}
 
 /* Navbar */
 
@@ -48,7 +53,12 @@ img{
   padding:0 30px;
   transition: 0.5s;
 }
-
+.case-list{
+  list-style: inside;
+}
+.case-list li{
+padding-bottom: 10px;
+}
 .navbar .top{
   background: transparent;
 }
@@ -189,8 +199,8 @@ img{
 }
 
 .post img{
-  width: 300px;
-  border-radius: 50%;
+  width: 100%;
+  border-radius: 5%;
   display: block;
   margin: 0 auto 30px;
 }
