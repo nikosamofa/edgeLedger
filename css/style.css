@@ -184,7 +184,7 @@ padding-bottom: 10px;
 /* Post */
 .post{
   padding: 50px 30px;
-
+text-align: center;
 }
 .post h2{
   font-size: 40px;
